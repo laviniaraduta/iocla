@@ -10,6 +10,16 @@ int main(void)
 	max = v[0];
 	i = 1;
 
-	(void) i;
-	(void) max;
+loop:
+	if (i >= (int) sizeof(v) / (int) sizeof(int)) {
+		goto end;
+	}
+	if (v[i] > max) {
+		max = v[i];
+	}
+	i++;
+	goto loop;
+
+end:
+	printf("Max: %d\n", max);
 }
