@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BSD-3-Clause
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -36,12 +38,11 @@ int main(void)
 		shuffle(numbers, 6);
 
 		if (is_sorted(numbers, 6))
-			/* TODO use goto instead of break */
-			goto print;
-			// break;
+			goto out;
 	}
-	
-print:
+
+out:
+
 	for (i = 0; i < 6; i++)
 		printf("%d ", numbers[i]);
 	printf("\n");
